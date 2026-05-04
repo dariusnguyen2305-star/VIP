@@ -3,154 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thanh Tuấn - Business Profile</title>
+    <title>Thanh Tuấn - Premium Profile</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root {
-            --bg-color: #0f0f0f;
-            --card-bg: #1a1a1a;
-            --accent-gold: #d4af37;
-            --text-main: #ffffff;
-            --text-dim: #a0a0a0;
-        }
         body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            background-image: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #0f0f0f 100%);
+            margin: 0; padding: 0;
+            background: #050505;
+            background-image: linear-gradient(135deg, #0f0f0f 0%, #050505 100%);
+            color: #fff;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex; justify-content: center; min-height: 100vh;
         }
         .container {
-            width: 90%;
-            max-width: 400px;
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 24px;
+            width: 100%; max-width: 420px;
+            padding: 40px 20px;
             text-align: center;
-            border: 1px solid #333;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-            position: relative;
-            overflow: hidden;
         }
-        /* Họa tiết sang trọng chìm */
-        .container::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
-            opacity: 0.1;
-            pointer-events: none;
+        /* Avatar Chuyên Nghiệp */
+        .profile-wrapper {
+            position: relative;
+            width: 130px; height: 130px;
+            margin: 0 auto 20px;
         }
         .profile-img {
-            width: 100px; height: 100px;
-            background: linear-gradient(45deg, #d4af37, #f9f295);
+            width: 100%; height: 100%;
             border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 40px;
-            font-weight: bold;
-            color: #000;
-            margin: 0 auto 20px;
-            border: 3px solid #333;
+            object-fit: cover;
+            border: 2px solid #d4af37;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
         }
-        h1 { margin: 10px 0; font-size: 24px; letter-spacing: 1px; }
-        .tags { display: flex; justify-content: center; gap: 10px; margin-bottom: 25px; }
+        h1 { font-size: 26px; letter-spacing: 2px; margin-bottom: 5px; color: #d4af37; text-transform: uppercase; }
+        .tag-container { margin-bottom: 30px; }
         .tag {
-            background: rgba(212, 175, 55, 0.1);
-            color: var(--accent-gold);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 12px;
-            border: 1px solid var(--accent-gold);
-            text-transform: uppercase;
+            font-size: 11px; font-weight: bold;
+            border: 1px solid #d4af37; color: #d4af37;
+            padding: 4px 15px; border-radius: 30px;
+            text-transform: uppercase; margin: 0 5px;
         }
-        .section-title {
-            text-align: left;
-            font-size: 13px;
-            color: var(--text-dim);
-            margin: 20px 0 10px 5px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+        .section-label {
+            text-align: left; font-size: 11px; color: #888;
+            margin: 25px 0 10px 10px; letter-spacing: 3px; text-transform: uppercase;
         }
-        .link-card {
-            background: #252525;
-            display: flex;
-            align-items: center;
-            padding: 15px;
-            margin-bottom: 12px;
-            border-radius: 12px;
-            text-decoration: none;
-            color: var(--text-main);
-            transition: 0.3s;
-            border: 1px solid transparent;
+        /* Thẻ liên kết kiểu Kính Mờ */
+        .card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            margin-bottom: 15px;
+            padding: 18px;
+            border-radius: 18px;
+            display: flex; align-items: center;
+            text-decoration: none; color: #fff;
+            transition: all 0.4s ease;
         }
-        .link-card:hover {
-            border-color: var(--accent-gold);
-            background: #2d2d2d;
-            transform: translateY(-2px);
+        .card:hover {
+            background: rgba(212, 175, 55, 0.08);
+            border-color: #d4af37;
+            transform: scale(1.02);
         }
-        .link-card i {
-            width: 30px; font-size: 20px; color: var(--accent-gold);
-            margin-right: 15px;
-        }
-        .link-info { text-align: left; }
-        .link-info span { display: block; font-size: 14px; font-weight: 600; }
-        .link-info small { color: var(--text-dim); font-size: 11px; }
+        .card i { font-size: 22px; color: #d4af37; margin-right: 20px; width: 25px; }
+        .card-info { text-align: left; }
+        .card-info b { display: block; font-size: 15px; margin-bottom: 2px; }
+        .card-info span { font-size: 12px; color: #aaa; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="profile-img">TT</div>
+        <div class="profile-wrapper">
+            <!-- Thay avatar.jpg bằng tên ảnh bạn đã tải lên -->
+            <img src="avatar.jpg" alt="Thanh Tuấn" class="profile-img">
+        </div>
         <h1>THANH TUẤN</h1>
-        <div class="tags">
+        <div class="tag-container">
             <span class="tag">Kinh doanh</span>
             <span class="tag">Doanh nghiệp</span>
         </div>
 
-        <div class="section-title">Kết nối doanh nghiệp</div>
-        <a href="https://zalo.me/0989777649" class="link-card">
+        <div class="section-label">Business Connect</div>
+        <a href="https://zalo.me/0989777649" class="card">
             <i class="fa-solid fa-briefcase"></i>
-            <div class="link-info">
-                <span>Zalo Doanh Nghiệp</span>
-                <small>0989.777.649</small>
+            <div class="card-info">
+                <b>Zalo Doanh Nghiệp</b>
+                <span>0989.777.649</span>
+            </div>
+        </a>
+        <a href="mailto:Dariusnguyen235@gmail.com" class="card">
+            <i class="fa-solid fa-envelope-open-text"></i>
+            <div class="card-info">
+                <b>Email Trực Tuyến</b>
+                <span>Dariusnguyen235@gmail.com</span>
             </div>
         </a>
 
-        <a href="mailto:Dariusnguyen235@gmail.com" class="link-card">
-            <i class="fa-solid fa-envelope"></i>
-            <div class="link-info">
-                <span>Email Trực Tuyến</span>
-                <small>Dariusnguyen235@gmail.com</small>
+        <div class="section-label">Personal Contact</div>
+        <a href="tel:0865585833" class="card">
+            <i class="fa-solid fa-phone-volume"></i>
+            <div class="card-info">
+                <b>Số Điện Thoại Cá Nhân</b>
+                <span>0865.585.833</span>
             </div>
         </a>
-
-        <div class="section-title">Liên hệ cá nhân</div>
-        <a href="tel:0865585833" class="link-card">
-            <i class="fa-solid fa-phone"></i>
-            <div class="link-info">
-                <span>Số Điện Thoại Cá Nhân</span>
-                <small>0865.585.833</small>
+        <a href="https://www.facebook.com/profile.php?id=100028249071536" class="card">
+            <i class="fa-brands fa-facebook-f"></i>
+            <div class="card-info">
+                <b>Facebook Profile</b>
+                <span>Kết nối trực tiếp</span>
             </div>
         </a>
-
-        <a href="https://www.facebook.com/profile.php?id=100028249071536" class="link-card">
-            <i class="fa-brands fa-facebook"></i>
-            <div class="link-info">
-                <span>Facebook Profile</span>
-                <small>Kết nối trực tiếp</small>
-            </div>
-        </a>
-
-        <a href="https://wa.me/0989777649" class="link-card">
+        <a href="https://wa.me/0989777649" class="card">
             <i class="fa-brands fa-whatsapp"></i>
-            <div class="link-info">
-                <span>WhatsApp</span>
-                <small>Thank Your</small>
+            <div class="card-info">
+                <b>WhatsApp</b>
+                <span>International Support</span>
             </div>
         </a>
     </div>
